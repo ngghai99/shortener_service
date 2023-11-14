@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Api::Shortens::Create do
   describe '#call' do
-    let(:valid_params) { { original_url: 'https://www.example.com' } }
+    let(:valid_params) { { original_url: 'https://www.rendi.com' } }
     let(:invalid_params) { { original_url: 'example' } }
     let(:existing_shorten) { create(:shorten, original_url: 'https://www.example.com') }
 
@@ -18,7 +18,7 @@ RSpec.describe Api::Shortens::Create do
     end
 
     context 'when the original_url is not yet shortened' do
-      let(:valid_params) { { original_url: 'https://www.example.vn' } }
+      let(:valid_params) { { original_url: 'https://www.rendi.vn' } }
       it 'creates a new Shorten and returns a JSON response with shortened URL' do
         command = described_class.new(valid_params).call
 

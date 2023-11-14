@@ -1,6 +1,6 @@
 class Shorten < ApplicationRecord
   validates :original_url, presence: true, uniqueness: true, format: { with: URI::DEFAULT_PARSER.make_regexp }
-  validates :shortened_url, presence: true, uniqueness: true
+  validates :shortened_url, presence: true, uniqueness: true, length: { is: 6 }
   validate :valid_url_format
 
   private

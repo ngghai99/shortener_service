@@ -5,7 +5,7 @@ class Api::UsersController < ApplicationController
     if command.success?
       render json:command.result
     else
-      render json: command.errors
+      render json: command.errors, status: :unprocessable_entity
     end
    end
 

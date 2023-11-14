@@ -10,6 +10,7 @@ module Api
 
       def call
         user = User.new(params)
+
         if user.save!
           UserPresenter.new(user).json_response
         end

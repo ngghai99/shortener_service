@@ -2,7 +2,7 @@ class User < ApplicationRecord
   has_secure_password
 
   before_validation :downcase_email
-  validates :email, uniqueness: true
+  validates :email, presence: true, uniqueness: true
   validates :password, :first_name, :last_name, presence: true
   validate :password_length
 

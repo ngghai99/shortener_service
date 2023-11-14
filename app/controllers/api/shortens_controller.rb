@@ -6,11 +6,12 @@ class Api::ShortensController < ApplicationController
   end
 
   def create
+    render_unauthorized('Token invalid') and return unless current_user
     command = Api::Shortens::Create.call(params)
     if command.success?
       render json: command.result
     else
-      render json: { errors: command.errors[:errors] }, status: :unauthorized
+      render json: { errors: command.errors[:errors] }, status: :unprocessable_entity
     end
   end
 
