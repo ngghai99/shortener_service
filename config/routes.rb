@@ -4,5 +4,5 @@ Rails.application.routes.draw do
     post "register" => "users#create"
     resources :shortens, only: [:show, :create]
   end
-  get '/:short_url', to: 'api/shortens#show', as: :shortened_url
+  get '/:short_url', to: 'api/shortens#show', as: :shortened
 end

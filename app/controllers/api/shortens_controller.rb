@@ -6,13 +6,11 @@ class Api::ShortensController < ApplicationController
   end
 
   def create
-    @shorten = Shorten.new(original_url: params[:original_url])
-    @shorten.shortened_url = SecureRandom.hex(6)
-
-    if @shorten.save
-      render json: { shortened_url: shortened_url_url(@shorten.shortened_url) }
+    command = Api::Shortens::Create.call(params)
+    if command.success?
+      render json: command.result
     else
-      render json: { error: @shorten.errors.full_messages }, status: :unprocessable_entity
+      render json: { errors: command.errors[:errors] }, status: :unauthorized
     end
   end
 
@@ -21,7 +19,7 @@ class Api::ShortensController < ApplicationController
   def set_shorten
     @shorten = Shorten.find_by(shortened_url: params[:short_url])
     unless @shorten
-      render json: { error: 'Shortened URL not found' }, status: :not_found
+      render html: "<strong>The Page you're looking for doesn't exist.</strong>".html_safe
     end
   end
 end
