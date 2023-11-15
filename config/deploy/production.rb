@@ -1,1 +1,1 @@
-server ENV['APP_HOST'], user: 'deploy', roles: %w{app db web}
+server '146.190.107.33', user: 'deploy', roles: %w{app db web}
