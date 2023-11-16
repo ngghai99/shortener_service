@@ -67,7 +67,7 @@
     }
     ```
   - respone:
-  ```sh
+    ```sh
     {
       "user": {
           "id": 2,
