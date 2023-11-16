@@ -8,7 +8,7 @@
 ## Prerequisites
 
   |       Rails       |      Ruby        | Postgres     |
-  | :------------:|:-------------:|:-----:|:-----:|
+  | :------------:|:-------------:|:-----:|
   |    7.0.8          |        3.1.4       |  13    |
 
 ## Installation & Configuration
