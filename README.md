@@ -37,6 +37,7 @@
   ```
 
 ## Usage
+** Change to http://localhost:3000/ if run application on local
 1. Step 1: Use Postmain to register:
  - endpoin: http://146.190.107.33/api/register
  - body:
