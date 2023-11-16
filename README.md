@@ -13,7 +13,7 @@
 
 ## Installation & Configuration
 
-  1. Step 1: Create .env file:
+  1. Step 1: Create .env file *example:
 
   ```sh
   RAILS_ENV=development
@@ -33,7 +33,7 @@
 ## Unit test
 - Gem: factory_bot_rails, rspec-rails
   ```sh
-  RAILS_ENV=test backend bundle exec rspec
+  RAILS_ENV=test bundle exec rspec
   ```
 
 ## Usage
