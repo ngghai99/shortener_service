@@ -1,5 +1,3 @@
-#Shortener Service - Oivan test
-
 ## Introduction
 - Application for shorten url
 - Login/Register
