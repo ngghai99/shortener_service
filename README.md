@@ -15,7 +15,7 @@
 
   ```sh
   RAILS_ENV=development
-  APP_HOST=146.190.107.33
+  APP_HOST=http://localhost:3000
   JWT_SECRET=de846910c295f4394ac29580bcd47637f62bc03a5abcd6adcdd025872e35af11526d577a0886b2d2973cc8b8b957457b0ceea6399e4d38f96ecec1f446cac7c1
   DATABASE_USERNAME=postgres
   DATABASE_PASSWORD=postgres
@@ -35,9 +35,9 @@
   ```
 
 ## Usage
-** Change to http://localhost:3000/ if run application on local
+
 1. Step 1: Use Postmain to register:
- - endpoin: http://146.190.107.33/api/register
+ - endpoin: http://localhost:3000/api/register
  - body:
     ```sh
     {
@@ -57,7 +57,7 @@
     }
     ```
 2. Step 2: Use Postmain to login:
- - endpoin: http://146.190.107.33/api/login
+ - endpoin: http://localhost:3000/api/login
  - body:
     ```sh
     {
@@ -78,7 +78,7 @@
     }
     ```
 3. Step 3: Use Postmain to shorten url:
- - endpoin: http://146.190.107.33/api/shortens
+ - endpoin: http://localhost:3000/api/shortens
  - In tab Headers: add filed "Authorization" with value is auth_token in step 2
  - body:
     ```sh
